@@ -10,10 +10,11 @@ router = APIRouter(
 )
 
 @router.get("/", response_model = List[schemas.PostResponse])
-def get_posts(db : Session = Depends(get_db)):
-    posts = db.query(models.Post).all()
+def get_posts(db : Session = Depends(get_db),Limit : int = 10):
+    posts = db.query(models.Post).limit(Limit).all()
     # cursor.execute("""SELECT * FROM posts""")
     # posts = cursor.fetchall()
+    print(Limit)
     return posts
 
 @router.post("/", status_code = status.HTTP_201_CREATED, response_model = schemas.PostResponse)
