@@ -1,17 +1,18 @@
 from sqlalchemy import create_engine, URL
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
+from .config import settings
 # import psycopg2
 # from psycopg2.extras import RealDictCursor
 # import time
 
 url_object = URL.create(
     "postgresql+psycopg2",
-    username = "postgres",
-    password = "Ullasdas2004@",
-    host = "localhost",
-    database = "FastAPI Social Media DB",
-    port = 5432
+    username = settings.database_username,
+    password = settings.database_password,
+    host = settings.database_hostname,
+    database = settings.database_name,
+    port = settings.database_port
 )
 
 engine = create_engine(url_object)
@@ -26,13 +27,6 @@ def get_db():
         yield db
     finally:
         db.close()
-
-
-
-# DB_HOST = 'localhost'
-# DB_NAME = 'FastAPI Social Media DB'
-# DB_USER = 'postgres'
-# DB_PASSWORD = 'Ullasdas2004@'
 
 
 
