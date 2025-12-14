@@ -10,12 +10,10 @@ router = APIRouter(
 )
 
 @router.get("/", response_model = List[schemas.PostResponse])
-def get_posts(db : Session = Depends(get_db),
-                current_user: models.User = Depends(oauth2.get_current_user)):
+def get_posts(db : Session = Depends(get_db)):
     posts = db.query(models.Post).all()
     # cursor.execute("""SELECT * FROM posts""")
     # posts = cursor.fetchall()
-    print(current_user.email)
     return posts
 
 @router.post("/", status_code = status.HTTP_201_CREATED, response_model = schemas.PostResponse)
@@ -36,7 +34,8 @@ def create_posts(post : schemas.PostBase,
 def get_post(id : int,db : Session = Depends(get_db)): # casting is important because it is by default str
     # cursor.execute("""SELECT * FROM posts WHERE id = %s""",(str(id),))
     # post = cursor.fetchone()
-    post = db.query(models.Post).filter(models.Post.id == id).first()
+    get_id_query = db.query(models.Post).filter(models.Post.id == id)
+    post = get_id_query.first()
     if not post:
         raise HTTPException(status_code = status.HTTP_404_NOT_FOUND,detail = f"post with id {id} not found")
     return post
