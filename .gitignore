@@ -132,3 +132,4 @@ cython_debug/
 
 # vscode
 .vscode/
+app2/
