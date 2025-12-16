@@ -23,16 +23,17 @@ class PostBase(BaseModel): #base model for structure of post in the requests
     published : bool = True
 
 
-class PostCreate(PostBase):
-    pass
-
 
 class PostResponse(PostBase):  #the post model for the responses that this API sends
     id : int
     created_at : datetime
     owner : UserResponse
 
-
+class PostOut(BaseModel):
+    Post: PostResponse
+    votes: int
+    class Config:
+        from_attributes = True
 
 class Token(BaseModel):
     access_token: str

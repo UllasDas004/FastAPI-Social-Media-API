@@ -2,6 +2,7 @@ from fastapi import FastAPI , Response , status , HTTPException , Depends,APIRou
 from .. import models, utils, schemas, oauth2
 from typing import List, Optional
 from sqlalchemy.orm import Session
+from sqlalchemy import func
 from ..database import get_db
 
 router = APIRouter(
@@ -9,11 +10,15 @@ router = APIRouter(
     tags = ["Posts"]
 )
 
-@router.get("/", response_model = List[schemas.PostResponse])
+@router.get("/", response_model = List[schemas.PostOut])
 def get_posts(db : Session = Depends(get_db),Limit : int = 10,Skip : int = 0,Search : Optional[str] = ""):
-    posts = db.query(models.Post).filter(models.Post.title.contains(Search)).limit(Limit).offset(Skip).all()
     # cursor.execute("""SELECT * FROM posts""")
     # posts = cursor.fetchall()
+
+    posts = db.query(models.Post
+                     ,func.count(models.Vote.post_id).label("votes")).join(models.Vote,
+                                       models.Vote.post_id == models.Post.id,isouter=True).group_by(models.Post.id).filter(
+                                           models.Post.title.contains(Search)).limit(Limit).offset(Skip).all()
     return posts
 
 @router.post("/", status_code = status.HTTP_201_CREATED, response_model = schemas.PostResponse)
@@ -30,11 +35,13 @@ def create_posts(post : schemas.PostBase,
     db.refresh(new_post)
     return new_post
 
-@router.get("/{id}", response_model = schemas.PostResponse)
+@router.get("/{id}", response_model = schemas.PostOut)
 def get_post(id : int,db : Session = Depends(get_db)): # casting is important because it is by default str
     # cursor.execute("""SELECT * FROM posts WHERE id = %s""",(str(id),))
     # post = cursor.fetchone()
-    get_id_query = db.query(models.Post).filter(models.Post.id == id)
+    get_id_query = db.query(models.Post
+                     ,func.count(models.Vote.post_id).label("votes")).join(models.Vote,
+                                       models.Vote.post_id == models.Post.id,isouter=True).group_by(models.Post.id).filter(models.Post.id == id)
     post = get_id_query.first()
     if not post:
         raise HTTPException(status_code = status.HTTP_404_NOT_FOUND,detail = f"post with id {id} not found")
@@ -58,7 +65,7 @@ def delete_post(id : int,db : Session = Depends(get_db),
     return Response(status_code = status.HTTP_204_NO_CONTENT)
 
 
-@router.put("/{id}", response_model = schemas.PostResponse)
+@router.put("/{id}", response_model = schemas.PostOut)
 def update_post(id : int,post : schemas.PostBase,
                 db : Session = Depends(get_db),
                 current_user: models.User = Depends(oauth2.get_current_user)):
