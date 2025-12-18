@@ -62,28 +62,6 @@
 
 <br />
 
-### 🚧 Status Update
-> **FastAPI Social** @FastAPISocial · *Just now* <br>
-> ⚠️ **Under Construction:** This project is currently in **Active Development**! 🏗️ <br>
-> I'm constantly adding new things and refining the code. Expect frequent updates and maybe a few breaking changes as we evolve. Watch this space! 👀 #WIP #buildinginpublic
-> 
-> <img src="https://img.shields.io/badge/Status-In_Development-orange?style=for-the-badge" />
-
-<br />
-
-### 📸 My Stack (Tech Stories)
-> **FastAPI Social** @FastAPISocial · *2h* <br>
-> The tools that make it all happen. 🛠️ #stack #dev
->
-> <div align="center">
->   <img src="https://img.shields.io/badge/FastAPI-On_Fire-009688?style=flat-square&logo=fastapi&logoColor=white" />
->   <img src="https://img.shields.io/badge/PostgreSQL-Database-336791?style=flat-square&logo=postgresql&logoColor=white" />
->   <img src="https://img.shields.io/badge/Pydantic-Validation-E92063?style=flat-square" />
->   <img src="https://img.shields.io/badge/SQLAlchemy-ORM-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white" />
-> </div>
-
-<br />
-
 ### ⚡ Quick Start Action
 > **System** @RootUser · *Sponsored* <br>
 > Ready to launch your own instance? 🚀 Tap below to reveal the full deployment guide.
@@ -134,6 +112,83 @@
 > ```
 > The API will go live at `http://127.0.0.1:8000`.
 > </details>
+
+<br />
+
+### 📸 My Stack (Tech Stories)
+> **FastAPI Social** @FastAPISocial · *2h* <br>
+> The tools that make it all happen. 🛠️ #stack #dev
+>
+> <div align="center">
+>   <img src="https://img.shields.io/badge/FastAPI-On_Fire-009688?style=flat-square&logo=fastapi&logoColor=white" />
+>   <img src="https://img.shields.io/badge/PostgreSQL-Database-336791?style=flat-square&logo=postgresql&logoColor=white" />
+>   <img src="https://img.shields.io/badge/Pydantic-Validation-E92063?style=flat-square" />
+>   <img src="https://img.shields.io/badge/SQLAlchemy-ORM-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white" />
+> </div>
+
+<br />
+
+### ⏳ The Evolution
+> **FastAPI Social** @FastAPISocial · *5d ago* <br>
+> 📊 **Data Insights Unlocked!** <br>
+> Just implemented aggregation! Now you can see exactly how many votes a post has. The SQL joins were tricky but SQLAlchemy handled it like a champ. 🏆 #data #analytics #sql
+>
+> *`SELECT posts.*, COUNT(votes.post_id) as votes FROM posts...`*
+
+<br />
+
+> **FastAPI Social** @FastAPISocial · *1w ago* <br>
+> 👍👎 **The People Have Spoken!** <br>
+> Real-time voting is live! Smart logic handles the actions:
+> *   **Vote (Dir=1):** Adds your like. ➕ (If already liked -> 🚫 Forbidden/Conflict)
+> *   **Unvote (Dir=0):** Removes your like. ➖ (If not liked yet -> 🚫 Forbidden/Error)
+> No double-voting allowed here! 🙅‍♂️ #interactive #logic
+
+<br />
+
+> **FastAPI Social** @FastAPISocial · *2w ago* <br>
+> 🔍 **Lost in the Noise? Not anymore.** <br>
+> Just added **Pagination & Searching**! You can now filter posts by keyword (`?search=xyz`) and control results with Limit & Offset.
+> No more loading the entire database at once! ⚡ #optimization #filtering #pagination
+
+<br />
+
+> **FastAPI Social** @FastAPISocial · *2w ago* <br>
+> 🔗 **Building Relationships** <br>
+> It's official: Users and Posts are now connected. Using Foreign Keys to ensure every post belongs to a valid user. No more orphan data! 👨‍👩‍👧‍👦 #relationaldb #postgres
+
+<br />
+
+> **FastAPI Social** @FastAPISocial · *3w ago* <br>
+> 🔐 **Security First** <br>
+> Added the `Users` table and fully secured the API. Password hashing with **Argon2**? Check. JWT tokens? Check. Your data is safe with us. 🕵️‍♂️ #security #auth
+
+<br />
+
+> **FastAPI Social** @FastAPISocial · *1mo ago* <br>
+> 🐍 **Controlling the beast** <br>
+> Moved from raw SQL to **SQLAlchemy ORM**. Managing the database with pure Python code feels like a superpower. 🦸‍♂️ Models defined, schemas ready. #orm #productivity
+
+<br />
+
+> **FastAPI Social** @FastAPISocial · *1mo ago* <br>
+> 🛡️ **You Shall Not Pass!** <br>
+> Just learned **Pydantic**. The data validation is insane. If the data doesn't match the schema, it doesn't get in. Clean data only. 🧼 #clean #validation
+
+<br />
+
+> **FastAPI Social** @FastAPISocial · *2mo ago* <br>
+> 🌱 **Hello World!** <br>
+> Just started a new journey. The stack: **FastAPI**, **PostgreSQL**, and **Postman** for testing. Let's see where this goes. 🚀 #dayone #coding
+
+<br />
+
+### 🚧 Status Update
+> **FastAPI Social** @FastAPISocial · *Pinned Bottom* <br>
+> ⚠️ **Under Construction:** This project is currently in **Active Development**! 🏗️ <br>
+> I'm constantly adding new things. The timeline above is just the beginning. Watch this space! 👀 #WIP #buildinginpublic
+> 
+> <img src="https://img.shields.io/badge/Status-In_Development-orange?style=for-the-badge" />
 
 <br />
 
