@@ -57,8 +57,17 @@
 > | :--- | :--- |
 > | 🔐 **Secure Login** | JWT Authentication with secure password hashing. |
 > | 👍 **Voting System** | Like & Vote on posts in real-time. |
-> | � **CRUD Posts** | Create, Read, Update, and Delete your content. |
+> | 📝 **CRUD Posts** | Create, Read, Update, and Delete your content. |
 > | 🏥 **Health Check** | System status monitoring endpoint. |
+
+<br />
+
+### 🚧 Status Update
+> **FastAPI Social** @FastAPISocial · *Just now* <br>
+> ⚠️ **Under Construction:** This project is currently in **Active Development**! 🏗️ <br>
+> I'm constantly adding new things and refining the code. Expect frequent updates and maybe a few breaking changes as we evolve. Watch this space! 👀 #WIP #buildinginpublic
+> 
+> <img src="https://img.shields.io/badge/Status-In_Development-orange?style=for-the-badge" />
 
 <br />
 
