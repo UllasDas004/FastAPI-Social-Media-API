@@ -34,9 +34,9 @@
 <div align="center">
   <table border="0">
     <tr>
-      <td align="center"><b>3.9+</b><br/><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="20" alt="Python" /></td>
+      <td align="center"><b>3.14</b><br/><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" height="20" alt="Python" /></td>
       <td width="20"></td>
-      <td align="center"><b>0.95+</b><br/><img src="https://fastapi.tiangolo.com/img/favicon.png" height="20" alt="FastAPI" /></td>
+      <td align="center"><b>0.125</b><br/><img src="https://fastapi.tiangolo.com/img/favicon.png" height="20" alt="FastAPI" /></td>
       <td width="20"></td>
       <td align="center"><b>100%</b><br/><span style="color:#888; font-size:12px">Uptime</span></td>
       <td width="20"></td>
@@ -124,6 +124,7 @@
 >   <img src="https://img.shields.io/badge/PostgreSQL-Database-336791?style=flat-square&logo=postgresql&logoColor=white" />
 >   <img src="https://img.shields.io/badge/Pydantic-Validation-E92063?style=flat-square" />
 >   <img src="https://img.shields.io/badge/SQLAlchemy-ORM-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white" />
+>   <img src="https://img.shields.io/badge/Alembic-Migrations-F05032?style=flat-square" />
 > </div>
 
 <br />
