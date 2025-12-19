@@ -129,6 +129,13 @@
 <br />
 
 ### ⏳ The Evolution
+> **FastAPI Social** @FastAPISocial · *Just now* <br>
+> 🧬 **Evolving Safely** <br>
+> Implemented **Alembic** for database migrations! 📦
+> No more manual schema hacks. We now have professional **Database Version Control**. We can upgrade and downgrade our DB schema with a single command. Stability level up! 🆙 #alembic #migrations #devops
+
+<br />
+
 > **FastAPI Social** @FastAPISocial · *5d ago* <br>
 > 📊 **Data Insights Unlocked!** <br>
 > Just implemented aggregation! Now you can see exactly how many votes a post has. The SQL joins were tricky but SQLAlchemy handled it like a champ. 🏆 #data #analytics #sql
@@ -145,6 +152,8 @@
 > No double-voting allowed here! 🙅‍♂️ #interactive #logic
 
 <br />
+
+
 
 > **FastAPI Social** @FastAPISocial · *2w ago* <br>
 > 🔍 **Lost in the Noise? Not anymore.** <br>
