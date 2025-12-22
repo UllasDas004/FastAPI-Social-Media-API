@@ -131,6 +131,12 @@
 
 ### ⏳ The Evolution
 > **FastAPI Social** @FastAPISocial · *Just now* <br>
+> 🌍 **Going Global!** <br>
+> Just configured `CORSMiddleware` to allow requests from any origin (`origins=["*"]`). The API is now ready to connect with frontends hosted anywhere! 📡 #CORS #integration #backend
+
+<br />
+
+> **FastAPI Social** @FastAPISocial · *3d ago* <br>
 > 🧬 **Evolving Safely** <br>
 > Implemented **Alembic** for database migrations! 📦
 > No more manual schema hacks. We now have professional **Database Version Control**. We can upgrade and downgrade our DB schema with a single command. Stability level up! 🆙 #alembic #migrations #devops
