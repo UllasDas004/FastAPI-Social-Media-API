@@ -11,12 +11,14 @@ router = APIRouter(
 )
 
 @router.get("/", response_model = List[schemas.PostOut])
-def get_posts(db : Session = Depends(get_db),Limit : int = 10,Skip : int = 0,Search : Optional[str] = ""):
+def get_posts(db : Session = Depends(get_db),Limit : int = 10,Skip : int = 0,Search : Optional[str] = "",Owner : Optional[int] = None):
     # cursor.execute("""SELECT * FROM posts""")
     # posts = cursor.fetchall()
 
-    posts = db.query(models.Post
-                     ,func.count(models.Vote.post_id).label("votes")).join(models.Vote,
+    posts_query = db.query(models.Post,func.count(models.Vote.post_id).label("votes"))
+    if Owner:
+        posts_query = posts_query.filter(models.Post.owner_id == Owner)
+    posts = posts_query.join(models.Vote,
                                        models.Vote.post_id == models.Post.id,isouter=True).group_by(models.Post.id).filter(
                                            models.Post.title.contains(Search)).limit(Limit).offset(Skip).all()
     return posts
