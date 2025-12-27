@@ -67,7 +67,7 @@ def delete_post(id : int,db : Session = Depends(get_db),
     return Response(status_code = status.HTTP_204_NO_CONTENT)
 
 
-@router.put("/{id}", response_model = schemas.PostOut)
+@router.put("/{id}", response_model = schemas.PostResponse)
 def update_post(id : int,post : schemas.PostBase,
                 db : Session = Depends(get_db),
                 current_user: models.User = Depends(oauth2.get_current_user)):
@@ -84,5 +84,5 @@ def update_post(id : int,post : schemas.PostBase,
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN,detail=f"Post with id {id} not owned by user with id {current_user_id}")
     get_id_query.update({getattr(models.Post, key): value for key, value in post.model_dump().items()}, synchronize_session=False)
     db.commit()
-    updated_post = get_id_query.first()
-    return updated_post
+    db.refresh(current_post)
+    return current_post
