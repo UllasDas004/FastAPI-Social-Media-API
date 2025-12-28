@@ -125,25 +125,35 @@
 >   <img src="https://img.shields.io/badge/Pydantic-Validation-E92063?style=flat-square" />
 >   <img src="https://img.shields.io/badge/SQLAlchemy-ORM-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white" />
 >   <img src="https://img.shields.io/badge/Alembic-Migrations-F05032?style=flat-square" />
+>   <img src="https://img.shields.io/badge/Pytest-Tests-0A9EDC?style=flat-square&logo=pytest&logoColor=white" />
 > </div>
 
 <br />
 
 ### ⏳ The Evolution
 > **FastAPI Social** @FastAPISocial · *Just now* <br>
+> 🧪 **Quality Assurance Verified** <br>
+> Just implemented a comprehensive test suite! 🛡️
+> Added tests for Users, Posts, and Votes. We can now refactor with confidence knowing that our logic is solid. Bugs don't stand a chance! 🚫🐛 #testing #pytest #qa
+>
+> <img src="https://img.shields.io/badge/Tests-Passing-green?style=for-the-badge&logo=pytest&logoColor=white" />
+
+<br />
+
+> **FastAPI Social** @FastAPISocial · *6d ago* <br>
 > 🌍 **Going Global!** <br>
 > Just configured `CORSMiddleware` to allow requests from any origin (`origins=["*"]`). The API is now ready to connect with frontends hosted anywhere! 📡 #CORS #integration #backend
 
 <br />
 
-> **FastAPI Social** @FastAPISocial · *3d ago* <br>
+> **FastAPI Social** @FastAPISocial · *10d ago* <br>
 > 🧬 **Evolving Safely** <br>
 > Implemented **Alembic** for database migrations! 📦
 > No more manual schema hacks. We now have professional **Database Version Control**. We can upgrade and downgrade our DB schema with a single command. Stability level up! 🆙 #alembic #migrations #devops
 
 <br />
 
-> **FastAPI Social** @FastAPISocial · *5d ago* <br>
+> **FastAPI Social** @FastAPISocial · *2w ago* <br>
 > 📊 **Data Insights Unlocked!** <br>
 > Just implemented aggregation! Now you can see exactly how many votes a post has. The SQL joins were tricky but SQLAlchemy handled it like a champ. 🏆 #data #analytics #sql
 >
@@ -151,7 +161,7 @@
 
 <br />
 
-> **FastAPI Social** @FastAPISocial · *1w ago* <br>
+> **FastAPI Social** @FastAPISocial · *2w ago* <br>
 > 👍👎 **The People Have Spoken!** <br>
 > Real-time voting is live! Smart logic handles the actions:
 > *   **Vote (Dir=1):** Adds your like. ➕ (If already liked -> 🚫 Forbidden/Conflict)
@@ -160,28 +170,26 @@
 
 <br />
 
-
-
-> **FastAPI Social** @FastAPISocial · *2w ago* <br>
+> **FastAPI Social** @FastAPISocial · *3w ago* <br>
 > 🔍 **Lost in the Noise? Not anymore.** <br>
 > Just added **Pagination & Searching**! You can now filter posts by keyword (`?search=xyz`) and control results with Limit & Offset.
 > No more loading the entire database at once! ⚡ #optimization #filtering #pagination
 
 <br />
 
-> **FastAPI Social** @FastAPISocial · *2w ago* <br>
+> **FastAPI Social** @FastAPISocial · *3w ago* <br>
 > 🔗 **Building Relationships** <br>
 > It's official: Users and Posts are now connected. Using Foreign Keys to ensure every post belongs to a valid user. No more orphan data! 👨‍👩‍👧‍👦 #relationaldb #postgres
 
 <br />
 
-> **FastAPI Social** @FastAPISocial · *3w ago* <br>
+> **FastAPI Social** @FastAPISocial · *4w ago* <br>
 > 🔐 **Security First** <br>
 > Added the `Users` table and fully secured the API. Password hashing with **Argon2**? Check. JWT tokens? Check. Your data is safe with us. 🕵️‍♂️ #security #auth
 
 <br />
 
-> **FastAPI Social** @FastAPISocial · *1mo ago* <br>
+> **FastAPI Social** @FastAPISocial · *4w ago* <br>
 > 🐍 **Controlling the beast** <br>
 > Moved from raw SQL to **SQLAlchemy ORM**. Managing the database with pure Python code feels like a superpower. 🦸‍♂️ Models defined, schemas ready. #orm #productivity
 
@@ -193,7 +201,7 @@
 
 <br />
 
-> **FastAPI Social** @FastAPISocial · *2mo ago* <br>
+> **FastAPI Social** @FastAPISocial · *1mo ago* <br>
 > 🌱 **Hello World!** <br>
 > Just started a new journey. The stack: **FastAPI**, **PostgreSQL**, and **Postman** for testing. Let's see where this goes. 🚀 #dayone #coding
 
