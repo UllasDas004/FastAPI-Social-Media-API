@@ -3,7 +3,7 @@ name: Build Code
 on: [push, pull_request]
 
 jobs:
-  initial_setup:
+  Build:
     environment:
       name: testing
     env:
